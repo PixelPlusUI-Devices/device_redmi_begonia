@@ -22,6 +22,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Inherit some extras stuff
 $(call inherit-product-if-exists, vendor/extras/extras.mk)
 $(call inherit-product, vendor/gcambsg/config.mk)
+$(call inherit-product, vendor/v4afx/config.mk)
 
 # Fix uses broken libraries
 RELAX_USES_LIBRARY_CHECK := true
