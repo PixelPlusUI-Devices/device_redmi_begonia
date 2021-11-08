@@ -1,5 +1,6 @@
 type xiaomiparts, domain;
 app_domain(xiaomiparts)
+typeattribute xiaomiparts mlstrustedsubject;
 
 # Allow xiaomiparts to find system services
 allow xiaomiparts {
