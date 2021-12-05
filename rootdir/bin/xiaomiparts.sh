@@ -116,8 +116,8 @@ if [ "$latch_unsignaled_old" != "$latch_unsignaled" ]; then
   setprop debug.sf.latch_unsignaled 1
   ;;
   *)# First boot params
-  setprop vendor.debug.sf.latch_unsignaled 1
-  setprop debug.sf.latch_unsignaled 1
+  setprop vendor.debug.sf.latch_unsignaled 0
+  setprop debug.sf.latch_unsignaled 0
   ;;
   esac
 	latch_unsignaled_old=$latch_unsignaled
