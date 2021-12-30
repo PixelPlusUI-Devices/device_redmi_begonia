@@ -450,10 +450,12 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     persist.log.tag.mTEE=S \
     persist.log.tag.mtkpower@impl=S
 
-# SurfaceFlinger
+# Colors
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.has_HDR_display=true \
-    ro.surface_flinger.has_wide_color_display=true
+    ro.surface_flinger.has_wide_color_display=true \
+    persist.sys.sf.color_saturation=1.1 \
+    persist.sys.sf.native_mode=0
 
 # Zygote preforking
 PRODUCT_PROPERTY_OVERRIDES += \
