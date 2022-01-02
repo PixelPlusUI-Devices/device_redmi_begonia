@@ -13,7 +13,6 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     debug.mediatek.disp_decompress=1 \
     debug.mediatek.game_pq_enable=1 \
     debug.mtk_tflite.target_nnapi=29 \
-    debug.sf.latch_unsignaled=1 \
     vendor.display.idle_time=0 \
     vendor.display.idle_time_inactive=0 \
     drm.service.enabled=true \
