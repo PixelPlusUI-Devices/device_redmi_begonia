@@ -342,7 +342,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0.vendor \
     android.hardware.power@1.1.vendor \
-    android.hardware.power@1.3.vendor
+    android.hardware.power@1.2.vendor \
+    android.hardware.power@1.3.vendor \
+    android.hardware.power-V1-ndk_platform.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/power/power_app_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_app_cfg.xml \
+    $(LOCAL_PATH)/configs/power/powercontable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.xml \
+    $(LOCAL_PATH)/configs/power/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
