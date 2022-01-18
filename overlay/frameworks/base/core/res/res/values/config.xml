@@ -522,4 +522,7 @@
          This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
          flag is set for wifi displays. -->
     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
+
+    <!-- Wifi driver supports Automatic channel selection (ACS) for softap -->
+    <bool translatable="false" name="config_wifi_softap_acs_supported">true</bool>
 </resources>
