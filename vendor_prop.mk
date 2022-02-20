@@ -430,7 +430,13 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     wifi.concurrent.interface= \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=1
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.log.tag.GED=S \
+    persist.log.tag.hwcomposer=S \
+    persist.log.tag.libnfc_nci=S \
+    persist.log.tag.libPowerHal=S \
+    persist.log.tag.mTEE=S \
+    persist.log.tag.mtkpower@impl=S
 
 # SurfaceFlinger
 PRODUCT_PROPERTY_OVERRIDES += \
