@@ -263,6 +263,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    gcam.sh \
     partition_permission.sh \
     setup_MTK_In-Call_volume_adjust.sh \
     throttle.sh \
@@ -270,6 +271,7 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6785.rc \
     init.mt6785.usb.rc \
+    init.gcam.rc \
     init.mtkincalladj.rc \
     init.project.rc \
     init.sensor_1_0.rc \
