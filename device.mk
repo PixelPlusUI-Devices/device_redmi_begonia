@@ -11,6 +11,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Call recording
+PRODUCT_PACKAGES += \
+    com.google.android.apps.dialer.call_recording_audio.features.xml
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0.vendor \
