@@ -157,6 +157,7 @@
     <string name="tcpcongestion_bic">bic</string>
     <string name="tcpcongestion_illinois">illinois</string>
     <string name="tcpcongestion_htcp">htcp</string>
+    <string name="tcpcongestion_bbr">bbr</string>
 
     <!-- WiFi Profiles -->
     <string name="wifi80_title">MTK Wi-Fi Band</string>
