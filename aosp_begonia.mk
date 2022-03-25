@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2022 PixelPlusUI
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -16,8 +16,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Inherit from begonia device
 $(call inherit-product, device/redmi/begonia/device.mk)
 
-# Inherit some common LineageOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelPlusUI stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit some extras stuff
 $(call inherit-product-if-exists, vendor/extras/extras.mk)
@@ -30,9 +30,19 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
+# PixelPlusUI Flags
+CUSTOM_BUILD_TYPE := OFFICIAL
+PPUI_MAINTAINER := 7Soldier
+IS_PHONE := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_QUICK_TAP  := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := begonia
-PRODUCT_NAME := lineage_begonia
+PRODUCT_NAME := aosp_begonia
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 8 Pro
 PRODUCT_MANUFACTURER := Xiaomi
