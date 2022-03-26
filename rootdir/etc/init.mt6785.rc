@@ -981,3 +981,8 @@ on property:sys.boot_completed=1
 on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.mt6785
     write /proc/sys/vm/swappiness 30
+
+# Fix whats-app call echo
+on property:persist.vendor.mtk_aurisys_framework_support=*
+  stop audioserver
+  start audioserver
