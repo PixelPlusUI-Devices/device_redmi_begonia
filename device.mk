@@ -77,8 +77,14 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor
 
 # Dex
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+DONT_DEXPREOPT_PREBUILTS := true
+
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
+    SystemUI \
+    NexusLauncherRelease \
+    CustomPixelLauncherOverlay
+
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 ART_BUILD_TARGET_NDEBUG := true
