@@ -53,6 +53,12 @@ dalvik.vm.heapstartsize=8m
 dalvik.vm.heaptargetutilization=0.75
 
 # Display
+debug.sf.disable_backpressure=1
+debug.enable.sglscale=1
+ro.hardware.egl=meow
+debug.mdpcomp.logs=0
+persist.sys.scrollingcache=1
+debug.sf.recomputecrop=0
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=10500000
 debug.sf.late.app.duration=20500000
