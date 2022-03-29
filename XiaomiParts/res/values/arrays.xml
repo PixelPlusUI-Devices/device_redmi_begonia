@@ -117,6 +117,7 @@
 
     <!-- Codecs -->
     <string-array name="codecs_profiles">
+        <item>@string/codecs_c2</item>
         <item>@string/codecs_mtk</item>
         <item>@string/codecs_omx</item>
     </string-array>
@@ -124,6 +125,7 @@
     <string-array name="codecs_values">
         <item>0</item>
         <item>1</item>
+        <item>2</item>
     </string-array>
 
     <string-array name="tcpcongestion_profiles">

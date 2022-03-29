@@ -117,6 +117,10 @@
             <Limit name="bitrate" range="1-40000000" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
+        <MediaCodec name="OMX.ffmpeg.h264.decoder" type="video/avc">
+            <Limit name="size" min="64x64" max="3840x2160" />
+            <Limit name="alignment" value="2x2" />
+        </MediaCodec>
         <MediaCodec name="c2.android.hevc.decoder" type="video/hevc" update="true">
             <Alias name="OMX.google.hevc.decoder" />
             <Limit name="alignment" value="2x2" />

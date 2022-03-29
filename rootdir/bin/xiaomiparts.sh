@@ -127,16 +127,33 @@ fi
 codecs="$(getprop persist.xp.hw_codecs)"
 if [ "$codecs_old" != "$codecs" ]; then
   case $codecs in
-  0)# MTK HW
-  setprop debug.stagefright.omx_default_rank 0
+  0)# Software C2
+  setprop debug.stagefright.omx_default_rank 512
+  setprop debug.stagefright.ccodec 4
+  setprop debug.media.codec2 2
+  setprop debug.stagefright.c2inputsurface -1
   killall mediaserver
   ;;
-  1)# Google OMX
+  1)# MTK HW
+  setprop debug.stagefright.omx_default_rank 0
+  setprop debug.stagefright.ccodec 1
+  setprop debug.media.codec2 0
+  setprop debug.stagefright.c2inputsurface 0
+  killall mediaserver
+  ;;
+  2)# Google OMX
   setprop debug.stagefright.omx_default_rank 1000
+  setprop debug.stagefright.ccodec 1
+  setprop debug.media.codec2 0
+  setprop debug.stagefright.c2inputsurface 0
   killall mediaserver
   ;;
-  *)# First boot params
-  setprop debug.stagefright.omx_default_rank 0
+  *)# First boot params (Software C2)
+  setprop debug.stagefright.omx_default_rank 512
+  setprop debug.stagefright.ccodec 4
+  setprop debug.media.codec2 2
+  setprop debug.stagefright.c2inputsurface -1
+  killall mediaserver
   ;;
   esac
 	codecs_old=$codecs
