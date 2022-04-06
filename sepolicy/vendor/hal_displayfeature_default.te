@@ -20,6 +20,8 @@ allow hal_displayfeature_default sysfs_graphics:dir r_dir_perms;
 allow hal_displayfeature_default sysfs_graphics:file rw_file_perms;
 allow hal_displayfeature_default sysfs_graphics:lnk_file read;
 
+allow hal_displayfeature_default fwk_sensor_hwservice:hwservice_manager find;
+
 get_prop(hal_displayfeature_default, hwservicemanager_prop)
 get_prop(hal_displayfeature_default, vendor_displayfeature_prop)
 set_prop(hal_displayfeature_default, vendor_displayfeature_prop)
