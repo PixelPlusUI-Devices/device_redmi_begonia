@@ -891,6 +891,24 @@ lib64/libaudio_param_parser-sys.so
 lib64/libaudioutilmtk.so
 lib64/libaudiotoolkit.so
 
+# Codec2
+vendor/etc/vintf/manifest/c2_manifest_vendor.xml
+
+# Wi-Fi 80MHz 
+vendor/firmware/wifi_sta2.cfg
+vendor/firmware/wifi_sta5.cfg
+vendor/firmware/wifi_sta25.cfg
+
+# Camera 64MP fix
+vendor/lib64/2libcam.hal3a.v3.lscMgr.so
+vendor/lib64/2libcam.halsensor.so
+vendor/lib64/2libmtkcam.logicalmodule.so
+vendor/lib64/2libmtkcam_metastore.so
+vendor/lib64/2libmtkcam_pipelinepolicy.so
+
+# BSG Gcam config
+etc/Gcam/Configs8/bsg_mk_v1.3.xml
+
 # Mediatek
 vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
