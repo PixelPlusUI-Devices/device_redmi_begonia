@@ -126,8 +126,8 @@
     <string name="vsync_title">V-Sync</string>
     <string name="vsync_summary">Вертикальная синхронизация (нужна перезагрузка)</string>
     <string name="vsync_dialogTitle">Вертикальная синхронизация (нужна перезагрузка)</string>
-    <string name="vsync_disabled">Отключено</string>
     <string name="vsync_enabled">Включено</string>
+    <string name="vsync_disabled">Отключено</string>
 
     <!-- latch_unsignaled -->
     <string name="latch_unsignaled_title">debug.sf.latch_unsignaled</string>

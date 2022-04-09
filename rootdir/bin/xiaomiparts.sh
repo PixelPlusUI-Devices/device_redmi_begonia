@@ -90,14 +90,14 @@ fi
 vsyncdis="$(getprop persist.xp.vsync.disabled)"
 if [ "$vsyncdisold" != "$vsyncdis" ]; then
   case $vsyncdis in
-  0)# Off
-  setprop ro.surface_flinger.running_without_sync_framework 1
-  ;;
-  1)# On
+  0)# On
   setprop ro.surface_flinger.running_without_sync_framework 0
   ;;
-  *)# First boot params
+  1)# Off
   setprop ro.surface_flinger.running_without_sync_framework 1
+  ;;
+  *)# First boot params
+  setprop ro.surface_flinger.running_without_sync_framework 0
   ;;
   esac
 	vsyncdisold=$vsyncdis
