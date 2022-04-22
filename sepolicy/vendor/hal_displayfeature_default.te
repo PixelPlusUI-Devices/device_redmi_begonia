@@ -30,3 +30,4 @@ vndbinder_use(hal_displayfeature_default)
 
 binder_call(hal_displayfeature_default, hal_graphics_composer_default)
 binder_call(hal_displayfeature_default, mtk_hal_pq)
+binder_call(hal_displayfeature_default, system_server)
