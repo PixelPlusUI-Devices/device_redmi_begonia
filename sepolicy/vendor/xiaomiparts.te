@@ -77,6 +77,9 @@ set_prop(xiaomiparts, pq_prop);
 allow xiaomiparts ffc_prop:property_service set;
 get_prop(xiaomiparts, ffc_prop);
 set_prop(xiaomiparts, ffc_prop);
+allow xiaomiparts mithermald_prop:property_service set;
+get_prop(xiaomiparts, mithermald_prop);
+set_prop(xiaomiparts, mithermald_prop);
 
 allow xiaomiparts sysfs:dir r_dir_perms;
 allow xiaomiparts sysfs:file r_file_perms;
