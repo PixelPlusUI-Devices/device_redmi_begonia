@@ -1,2 +1,5 @@
 # Last kernel
 allow system_server proc_last_kmsg:file r_file_perms;
+
+# Display feature
+binder_call(system_server, hal_displayfeature_default)
