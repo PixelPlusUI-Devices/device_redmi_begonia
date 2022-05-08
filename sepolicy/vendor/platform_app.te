@@ -1,2 +1,4 @@
 allow platform_app sysfs_fpsinfo:file rw_file_perms;
 allow platform_app zygote:unix_stream_socket { getopt getattr };
+
+get_prop(platform_app, vendor_displayfeature_prop)
