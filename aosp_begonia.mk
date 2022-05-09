@@ -50,7 +50,6 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_STOCK_ARCORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP  := true
-TARGET_SUPPORTS_CALL_RECORDING := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := begonia
