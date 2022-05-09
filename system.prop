@@ -6,9 +6,6 @@ ro.audio.silent=0
 ro.config.media_vol_steps=15
 ro.config.vc_call_vol_steps=10
 
-# Bluetooth
-persist.bluetooth.avrcpversion=avrcp16
-
 # Blur
 ro.surface_flinger.supports_background_blur=1
 persist.sys.sf.disable_blurs=0
