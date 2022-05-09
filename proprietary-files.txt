@@ -758,6 +758,8 @@ vendor/lib64/libstagefrighthw.so
 
 # Engineering Mode
 priv-app/EngineerMode/EngineerMode.apk
+app/YGPS/YGPS.apk
+vendor/app/EmCamera/EmCamera.apk
 lib/libem_support_jni.so
 lib/libem_audio_jni.so
 lib/libem_usb_jni.so
