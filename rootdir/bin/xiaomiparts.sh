@@ -136,15 +136,15 @@ if [ "$codecs_old" != "$codecs" ]; then
   ;;
   1)# MTK HW
   setprop debug.stagefright.omx_default_rank 0
-  setprop debug.stagefright.ccodec 1
-  setprop debug.media.codec2 0
+  setprop debug.stagefright.ccodec 4
+  setprop debug.media.codec2 2
   setprop debug.stagefright.c2inputsurface 0
   killall mediaserver
   ;;
   2)# Google OMX
   setprop debug.stagefright.omx_default_rank 1000
-  setprop debug.stagefright.ccodec 1
-  setprop debug.media.codec2 0
+  setprop debug.stagefright.ccodec 4
+  setprop debug.media.codec2 2
   setprop debug.stagefright.c2inputsurface 0
   killall mediaserver
   ;;
