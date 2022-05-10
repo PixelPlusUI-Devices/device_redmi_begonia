@@ -84,10 +84,6 @@ def Firmware_Images(info, incremental):
     for part in bin_map[_bin]:
       fw_cmd += 'package_extract_file("{}_in.bin", "/dev/block/bootdevice/by-name/{}");\n'.format(_bin, part)
 
-  # Flash prebuilt recovery
-  AddImageOnly(info, 'twrp_in.img', incremental, True)
-  fw_cmd += 'package_extract_file("twrp.img", "/dev/block/bootdevice/by-name/recovery");\n'
-
   # END Flash Indian Firmware
 
   fw_cmd += '),\n(\n'
@@ -108,11 +104,13 @@ def Firmware_Images(info, incremental):
     for part in bin_map[_bin]:
       fw_cmd += 'package_extract_file("{}.bin", "/dev/block/bootdevice/by-name/{}");\n'.format(_bin, part)
 
-  # Flash prebuilt recovery
-  AddImageOnly(info, 'twrp.img', incremental, True)
-  fw_cmd += 'package_extract_file("twrp.img", "/dev/block/bootdevice/by-name/recovery");\n'
-
   # END Flash Global Firmware
 
-  fw_cmd += ')\n);'
+  fw_cmd += ')\n);\n'
+
+  # Flash prebuilt recovery
+  fw_cmd += 'ui_print("Flashing prebuilt recovery...");\n'
+  AddImageOnly(info, 'twrp.img', incremental, True)
+  fw_cmd += 'package_extract_file("twrp.img", "/dev/block/bootdevice/by-name/recovery");'
+
   info.script.AppendExtra(fw_cmd)
