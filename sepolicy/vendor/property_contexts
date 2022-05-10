@@ -40,6 +40,7 @@ persist.xp.wifi80           	    u:object_r:wifi80_prop:s0
 persist.xp.pq               	    u:object_r:pq_prop:s0
 persist.xp.usb               	    u:object_r:ffc_prop:s0
 persist.xp.thermal            	    u:object_r:mithermald_prop:s0
+persist.xp.selinux                  u:object_r:selinux_prop:s0
 
 ## Dirac
 audio.dirac.                        u:object_r:dirac_prop:s0

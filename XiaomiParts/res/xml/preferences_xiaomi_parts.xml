@@ -97,6 +97,16 @@
             android:icon="@drawable/ic_wifi80" 
             android:title="@string/wifi80_title" />
 
+        <com.redmi.xiaomiparts.preferences.SecureSettingListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/selinux_dialogTitle"
+            android:entries="@array/selinux_profiles"
+            android:entryValues="@array/selinux_values"
+            android:key="selinux"
+            android:summary="@string/selinux_summary"
+            android:icon="@drawable/ic_selinux"
+            android:title="@string/selinux_title" />
+
         <com.redmi.xiaomiparts.preferences.SecureSettingSwitchPreference
             android:defaultValue="0"
             android:key="usb"

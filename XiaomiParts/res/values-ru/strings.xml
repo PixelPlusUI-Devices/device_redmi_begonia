@@ -217,6 +217,13 @@
     <string name="wifi80_5">Только 5G -> 80 МГц</string>
     <string name="wifi80_25">2G+5G -> 80 МГц</string>
 
+    <!-- SELinux -->
+    <string name="selinux_title">Статус SELinux</string>
+    <string name="selinux_summary">Статус безопасности системы SELinux</string>
+    <string name="selinux_dialogTitle">Статус безопасности системы SELinux</string>
+    <string name="selinux_enforcing">Принудительный</string>
+    <string name="selinux_permissive">Разрешающий</string>
+
     <!-- Hand wave gesture -->
     <string name="hand_wave_gesture_title">Взмах руки</string>
     <string name="hand_wave_gesture_summary">Показать уведомления при взмахе рукой</string>

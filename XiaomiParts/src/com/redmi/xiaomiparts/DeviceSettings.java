@@ -59,6 +59,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_WIFI80 = "wifi80";
     public static final String WIFI80_SYSTEM_PROPERTY = "persist.xp.wifi80";
 
+    public static final String PREF_SELINUX = "selinux";
+    public static final String SELINUX_SYSTEM_PROPERTY = "persist.xp.selinux";
+
     public static final String PREF_USB = "usb";
     public static final String USB_SYSTEM_PROPERTY = "persist.xp.usb";
 
@@ -93,6 +96,8 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingListPreference mTCP;
 
     private SecureSettingListPreference mWiFi80;
+
+    private SecureSettingListPreference mSELinux;
 
     private SecureSettingSwitchPreference mUsb;
 
@@ -179,6 +184,12 @@ public class DeviceSettings extends PreferenceFragment implements
 	mWiFi80.setValue(FileUtils.getStringProp(WIFI80_SYSTEM_PROPERTY, "0"));
 	mWiFi80.setSummary(mWiFi80.getEntry());
 	mWiFi80.setOnPreferenceChangeListener(this);
+
+    // SELinux
+    mSELinux = (SecureSettingListPreference) findPreference(PREF_SELINUX);
+    mSELinux.setValue(FileUtils.getStringProp(SELINUX_SYSTEM_PROPERTY, "0"));
+    mSELinux.setSummary(mSELinux.getEntry());
+    mSELinux.setOnPreferenceChangeListener(this);
 
     // USB Charging
     mUsb = (SecureSettingSwitchPreference) findPreference(PREF_USB);
@@ -283,6 +294,12 @@ public class DeviceSettings extends PreferenceFragment implements
                 mWiFi80.setValue((String) value);
                 mWiFi80.setSummary(mWiFi80.getEntry());
                 FileUtils.setStringProp(WIFI80_SYSTEM_PROPERTY, (String) value);
+                break;
+
+            case PREF_SELINUX:
+                mSELinux.setValue((String) value);
+                mSELinux.setSummary(mSELinux.getEntry());
+                FileUtils.setStringProp(SELINUX_SYSTEM_PROPERTY, (String) value);
                 break;
 
             case PREF_USB:

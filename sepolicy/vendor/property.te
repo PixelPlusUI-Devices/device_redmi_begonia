@@ -17,3 +17,4 @@ type wifi80_prop, property_type;
 type pq_prop, property_type;
 type ffc_prop, property_type;
 type mithermald_prop, property_type;
+type selinux_prop, property_type;

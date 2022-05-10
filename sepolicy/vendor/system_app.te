@@ -3,3 +3,4 @@ allow system_app sysfs_zram:file r_file_perms;
 allow system_app zygote:unix_stream_socket { getopt getattr };
 allow system_app proc_pagetypeinfo:file read;
 allow system_app sysfs:file { read open getattr };
+allow system_app selinuxfs:file rw_file_perms;

@@ -148,6 +148,17 @@
         <item>6</item>
     </string-array>
 
+    <!-- SELinux -->
+    <string-array name="selinux_profiles">
+        <item>@string/selinux_enforcing</item>
+        <item>@string/selinux_permissive</item>
+    </string-array>
+
+    <string-array name="selinux_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
     <!-- WiFi Profiles -->
     <string-array name="wifi80_profiles">
         <item>@string/wifi80_default</item>

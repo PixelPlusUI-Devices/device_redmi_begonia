@@ -12,6 +12,7 @@ codecs_old=10
 hw_overlays_old=10
 force64_old=10
 wifi80_old=10
+selinux_old=10
 
 pq_old=10
 usb_old=10
@@ -300,6 +301,23 @@ if [ "$wifi80_old" != "$wifi80" ]; then
   ;;
   esac
 	wifi80_old=$wifi80
+fi
+
+## SELinux switcher
+selinux="$(getprop persist.xp.selinux)"
+if [ "$selinux_old" != "$selinux" ]; then
+  case $selinux in
+  0)# SELinux - Enforcing
+  echo 1 > /sys/fs/selinux/enforce
+  ;;
+  1)# SELinux - Permissive
+  echo 0 > /sys/fs/selinux/enforce
+  ;;
+  *)# First boot params
+  echo 1 > /sys/fs/selinux/enforce
+  ;;
+  esac
+        selinux_old=$selinux
 fi
 
 sleep 2
