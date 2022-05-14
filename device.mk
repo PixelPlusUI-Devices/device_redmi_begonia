@@ -68,19 +68,25 @@ PRODUCT_PACKAGES += \
 
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
-DONT_DEXPREOPT_PREBUILTS := true
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
 
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    NexusLauncherRelease \
-    CustomPixelLauncherOverlay
-
+WITH_DEXPREOPT_DEBUG_INFO := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 ART_BUILD_TARGET_NDEBUG := true
 ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
+USE_DEX2OAT_DEBUG := false
+EXCLUDE_SYSTEMUI_TESTS := true
+
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI \
+    NexusLauncherRelease \
+    CustomPixelLauncherOverlay \
+    Phonesky \
+    GoogleServicesFramework
 
 # Display
 PRODUCT_PACKAGES += \
