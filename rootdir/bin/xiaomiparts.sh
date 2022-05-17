@@ -134,12 +134,18 @@ if [ "$pq_old" != "$pq" ]; then
   case $pq in
   0)# Off
   setprop ro.vendor.mtk_pq_support 0
+  stop pq-2-2
+  stop displayfeature-hal-1-0
   ;;
   1)# On
   setprop ro.vendor.mtk_pq_support 1
+  start pq-2-2
+  start displayfeature-hal-1-0
   ;;
   *)# First boot params
   setprop ro.vendor.mtk_pq_support 0
+  stop pq-2-2
+  stop displayfeature-hal-1-0
   ;;
   esac
 	pq_old=$pq
